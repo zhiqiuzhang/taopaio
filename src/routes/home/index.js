@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import TopBar from './components/TopBar'
+import PosterSlide from './components/Slide'
 
 class Home extends Component {
   showCitylayer() {
@@ -10,6 +11,11 @@ class Home extends Component {
     return (
       <div className="home">
         	<TopBar city="开封" showCitylayer={this.showCitylayer}/>
+        	<div className="home-slide">
+        		<div className="home-slideWrap">
+        			<PosterSlide data={[]} />
+        		</div>
+        	</div>
       </div>
     );
   }

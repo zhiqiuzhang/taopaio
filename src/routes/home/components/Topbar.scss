@@ -1,37 +1,38 @@
 .topBar {
-	display: flex;
-	align-items: center;
-	padding: 15px 20px 4px 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px 4px 20px;
 
-	&-city {
-		color: #000;
-		font-size: 14px;
-		&::after {
-			content: '';
-			display: inline-block;
-			margin-left: 6px;
-			top: 10px;
-			width: 0;
-			height: 0;
-			border-width: 4px;
-			border-style: solid;
-			border-color: #000 transparent transparent;
-		}
-	}
+    &-city {
+        color: #000;
+        font-size: 14px;
 
-	&-search {
-		flex: 1;
-		height: 20px;
-		background-color: #f6f5f5;
-		border-radius: 14px;
-		margin: 0 14px;
-	}
+        &::after {
+            content: '';
+            display: inline-block;
+            margin-left: 6px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border-width: 4px;
+            border-style: solid;
+            border-color: #000 transparent transparent;
+        }
+    }
 
-	&-scan {
-		width: 20px;
-		height: 20px;
-		background: url('../../../icons/scan.png') 50% / contain no-repeat;
-	}
+    &-search {
+        flex: 1;
+        height: 20px;
+        background-color: #f6f5f5;
+        border-radius: 14px;
+        margin: 0 14px;
+    }
+
+    &-scan {
+        width: 20px;
+        height: 20px;
+        background: url('../../../icons/scan.png') 50% / contain no-repeat;
+    }
 
 
 }
