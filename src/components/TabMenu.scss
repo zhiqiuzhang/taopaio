@@ -1,0 +1,23 @@
+@import '../util.scss';
+
+.tabMenu {
+	position: fixed;
+	bottom: 0;
+	@include flex-layer(row);
+	width: 100%;
+	height: 48px;
+	background: #fff;
+
+	&-btn {
+		flex: 1;
+		@include flex-layer(column);
+	}
+
+	&-text {
+		font-size: 10px;
+	    // text-align: center;
+	    margin-top: 6px;
+	    font-weight: 700;
+	}
+
+}

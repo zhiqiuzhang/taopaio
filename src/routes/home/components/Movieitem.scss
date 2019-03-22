@@ -1,22 +1,22 @@
+@import '../../../util.scss';
+
 .movieItem {
 	position: relative;
 	display: flex;
 	flex-direction: row;
 	padding: 16px 20px 16px 0;
-	// border-bottom: 1px solid #ced0cf; 
 	&::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    background: #DCDCDC;
-    width: 100%;
-    height: 1px;
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.2);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-	// align-items: center;
+	    content: '';
+	    position: absolute;
+	    bottom: 0;
+	    background: #DCDCDC;
+	    width: 100%;
+	    height: 1px;
+	    -webkit-transform: scaleY(0.5);
+	    transform: scaleY(0.2);
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	}
 
 	&-poster  {
 		margin-right: 11px;
@@ -32,15 +32,16 @@
 	&-detail {
 		flex: 1 1;
 		line-height: 1;
-
-		.movieItem-title {
-			margin: 4px 0 10px 0;
-			font-size: 16px;
-			font-color: #000;
-			letter-spacing: 2px; 
 		}
 
-		.movieItem-rate {
+		&-title {
+			margin: 4px 0 10px 0;
+			font-size: 16px;
+			color: $black;
+			letter-spacing: 0px; 
+		}
+
+		&-rate {
 			margin: 0 0 8px 0;
 			font-size: 14px;
 			color: #323332;
@@ -54,64 +55,44 @@
 			} 
 		}
 
-		.movieItem-director {
+		&-director {
 			margin: 0 0 9px 0;
 			font-size: 13px;
-			color: #777;
-			letter-spacing: 2px;  
+			color: $gray;
+			letter-spacing: 0px;  
 		}
 
-		.movieItem-actor {
+		&-actor {
 			margin: 0 0 9px 0;
 			font-size: 13px;
-			color: #777;
-			letter-spacing: 2px;  
+			color: $gray;
+			letter-spacing: 0px;  
 		}
-
-	}
-
-	&-tag {
-		.tTag {
-			display: inline-block;
-			width: 56px;
-			height: 18px;
-			font-size: 12px;
-			border: 1px solid;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 18px;
-		}
-		.tTag-red {
-			margin-right: 6px;
-			color: #ac646f;
-			border-color: #ac646f;
-		}
-		.tTag-blue {
-			color: #4f85b1;
-			border-color: #4f85b1;
-		}
-	}
 
 	&-buy {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		.movieItem-buyBtn {
+		}
+
+		&-buyBtn {
 			height: 30px;
 			padding: 0 14px;
 			margin-bottom: 6px;
 			background: #ff6f90;
+		    background: -webkit-linear-gradient(bottom left, #ff7ba0, #ff4d64);
+		    background: -o-linear-gradient(bottom left, #ff7ba0, #ff4d64);
+		    background: linear-gradient(to top right, #ff7ba0, #ff4d64);
 			border-radius: 16px;
 			font-size: 12px;
 			color: #fff;
 			line-height: 30px;
 			
 		}
-		.movieItem-buyPrice {
+		&-buyPrice {
 			font-size: 9px;
 			color: #999;
 		}
-	}
 
 }

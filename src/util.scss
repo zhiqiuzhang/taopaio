@@ -1,0 +1,9 @@
+$black: #000;
+$gray: #777;
+
+@mixin flex-layer($directon) {
+	display: flex;
+	flex-direction: $directon;
+	align-items: center;
+	justify-content: center;
+}
