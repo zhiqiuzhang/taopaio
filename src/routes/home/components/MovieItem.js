@@ -10,7 +10,7 @@ const MovieItem = () => {
 			</div>
 			<div className="movieItem-detail">
 				<h3 className="movieItem-title">红海行动</h3>
-				<div className="movieItem-rate">观众评分 <span>9.3</span></div>
+				<div className="movieItem-rate">淘票票评分 <span>9.3</span></div>
 				<div className="movieItem-director">导演：林超贤</div>
 				<div className="movieItem-actor">主演：丁娜 海清</div>
 				<div className="movieItem-tag">
@@ -19,7 +19,7 @@ const MovieItem = () => {
 				</div>
 			</div>
 			<div className="movieItem-buy">
-				<div className="movieItem-buyBtn tBtn">购买</div>
+				<div className="movieItem-buyBtn tBtn">购票</div>
 				<div className="movieItem-buyPrice">9.9</div>
 			</div>
 		</div>

@@ -4,7 +4,9 @@ import '../../commen.scss';
 import TopBar from './components/TopBar'
 import PosterSlide from './components/Slide'
 import MovieItem from './components/MovieItem'
+import CityLayer from './components/CityLayer'
 import TabMenu from '../../components/TabMenu'
+import RenderToBody from '../../components/RenderToBody'
 
 class Home extends Component {
   showCitylayer() {
@@ -32,7 +34,9 @@ class Home extends Component {
         		<MovieItem />
         	</div>
 
-        	<TabMenu />
+        	<TabMenu current={'movie'}/>
+
+        	<RenderToBody><CityLayer /></RenderToBody>
         	
       </div>
     );

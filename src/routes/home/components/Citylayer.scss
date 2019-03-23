@@ -1,0 +1,135 @@
+@mixin cityLable {
+	padding: 8px 0 8px 20px;   
+	background: #eee;
+	font-size: 12px;
+	color: #777777;
+}
+@mixin cityWrap {
+	padding: 10px 0 10px 24px;
+	background: #fff;
+	font-size: 16px;  
+	color: #777777;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.cityLayer {
+	position: fixed;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    overflow: hidden;
+    background-color: #fff;
+
+    &-title {
+	    z-index: 10;
+	    top: 0;
+	    width: 100%;
+	    background-color: #fff;
+	    line-height: 40px;
+	    font-size: 12px;
+	    font-weight: 700;
+	    text-align: center;
+	    border-bottom: 1px solid #f2f2f4;
+    }
+
+    &-close {
+	    position: absolute;
+        height: 40px;
+	    width: 80px;
+        font-weight: 400;
+    }
+   &-content {
+    	position: absolute;
+    	top: 40px;
+    	bottom: 0;
+    	width: 100%;
+    	overflow-y: scroll;
+    	overflow-x: hidden;
+    	box-sizing: border-box;
+    	-webkit-overflow-scrolling: touch;
+    }
+    .cityBlock {
+    	&-label {
+    		@include cityLable;
+    	}
+    	&-wrap {
+    		@include cityWrap;
+    	}
+    }
+
+    .cityGps {
+    	&-label {
+    		@include cityLable;
+    	}
+    	&-wrap {
+    		@include cityWrap;
+    	}
+    }
+
+    .cityHot {
+    	&-label {
+    		@include cityLable;
+    	}
+    	&-wrap {
+    		padding-left: 24px;
+    		background: #fff;
+    		font-size: 16px;  
+    		color: #777777;
+    	}
+    	ul {
+    		padding: 0;
+    		margin: 0;
+    	}
+    	ul li{
+			padding: 10px 0 10px 0;
+			border-bottom: 1px solid #ededed;
+			&:last-child {
+				border-bottom: none;
+			}
+    	}
+    }
+
+    .cityList {
+    	&-label {
+    		@include cityLable;
+    	}
+    	&-wrap {
+			padding-left: 24px;
+    		margin: 0;
+    		font-size: 16px;  
+    		color: #777777;
+    	}
+    	&-item {
+    		padding: 10px 0 10px 0;
+			border-bottom: 1px solid #ededed;
+			&:last-child {
+				border-bottom: none;
+			}
+    	}
+    }
+
+    &-index {
+		position: absolute;
+		top: 48px;
+		right: 20px;
+		ul {
+    		padding: 0;
+    		margin: 0;
+    		text-align: center;
+    	}
+    	ul li {
+    		margin-bottom: 4px;
+    	}
+    	ul li a {
+    		font-size: 12px;
+    		color: #8fc8f4;
+    	}
+    }
+
+}

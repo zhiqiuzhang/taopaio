@@ -1,23 +1,73 @@
 @import '../util.scss';
 
 .tabMenu {
+
 	position: fixed;
 	bottom: 0;
 	@include flex-layer(row);
 	width: 100%;
 	height: 48px;
-	background: #fff;
+	background: rgba(255, 255, 255, 0.96);
+
+	&::after {
+		content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    background: #DCDCDC;
+	    width: 100%;
+	    height: 1px;
+	    -webkit-transform: scaleY(0.2);
+	    transform: scaleY(0.2);
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	}
 
 	&-btn {
 		flex: 1;
 		@include flex-layer(column);
 	}
 
+	&-icon {
+		width: 22px;
+		height: 22px;
+		&-movie {
+			background: url('../icons/movie.svg') 50% / contain no-repeat;
+		}
+		&-cinema {
+			background: url('../icons/cinema.svg') 50% / contain no-repeat;
+		}
+		&-user {
+			background: url('../icons/mine.svg') 50% / contain no-repeat;
+		}
+		
+	}
+	&-btn-active {
+		.tabMenu-text {
+			color: #fd5d72
+		}
+		.tabMenu-icon-movie {
+			background: url('../icons/movieactive.svg') 50% / contain no-repeat;
+		}
+		.tabMenu-icon-cinema {
+			background: url('../icons/cinemactive.svg') 50% / contain no-repeat;
+		}
+		.tabMenu-icon-user {
+			background: url('../icons/mineactive.svg') 50% / contain no-repeat;
+		}
+
+	}
+
 	&-text {
 		font-size: 10px;
+		color: #666;
 	    // text-align: center;
-	    margin-top: 6px;
-	    font-weight: 700;
+	    margin-top: 3px;
+	    // font-weight: 700;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 }

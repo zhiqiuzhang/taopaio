@@ -7,3 +7,17 @@ $gray: #777;
 	align-items: center;
 	justify-content: center;
 }
+
+@mixin border-after($bcolor, $btop, $bleft) {
+	content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid $bcolor;
+    border-radius: 4px;
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    -webkit-transform-origin: $btop $bleft;
+}
