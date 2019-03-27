@@ -15,15 +15,17 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-
+      		{/*主页顶部*/}
         	<TopBar city="开封" showCitylayer={this.showCitylayer}/>
 
+			{/*主页顶部*/}
         	<div className="home-slide">
         		<div className="home-slideWrap">
         			<PosterSlide data={[]} />
         		</div>
         	</div>
 
+            {/*电影列表*/}
         	<div className="home-content">
         		<MovieItem />
         		<MovieItem />
@@ -34,9 +36,10 @@ class Home extends Component {
         		<MovieItem />
         	</div>
 
+			{/*主页底部tab*/}
         	<TabMenu current={'movie'}/>
 
-        	<RenderToBody><CityLayer /></RenderToBody>
+        	{/* <RenderToBody><CityLayer /></RenderToBody> */}
         	
       </div>
     );
