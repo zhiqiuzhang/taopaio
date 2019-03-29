@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Topbar.scss';
-
+// 主页顶部组件
 const TopBar = ({ city, showCitylayer }) => {
 	return (
 		<div className="topBar">
@@ -12,7 +12,7 @@ const TopBar = ({ city, showCitylayer }) => {
 	)
 }
 
-TopBar.PropsTypes = {
+TopBar.propsTypes = {
 	city: PropTypes.string.isRequired,
 	showCitylayer: PropTypes.func.isRequired
 }
